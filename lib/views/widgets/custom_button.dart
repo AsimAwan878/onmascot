@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
           primary: buttonColor,
-          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 15),
           side: BorderSide(
               color: borderColor == null ? primaryColor : borderColor),
           textStyle: TextStyle(color: textColor)),
