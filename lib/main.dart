@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+
+import 'package:onmascota/screens/splash_gif/splash_screen.dart';
+import 'package:onmascota/screens/welcome/welcome_screen.dart';
+
+import 'constant.dart';
+
 import 'package:onmascota/config/cus_theme.dart';
 import 'package:onmascota/views/auth/login_screen.dart';
 import 'package:onmascota/views/screens/start_screen.dart';
@@ -9,14 +15,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: themeData,
-      home: LoginScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: themeData,
+        home: LoginScreen(),
+        title: 'Onmascota',
+        routes: <String, WidgetBuilder>{
+          SPLASH_SCREEN: (BuildContext context) => SplashScreenWithGif(),
+          WELCOME_SCREEN: (BuildContext context) => WelcomeScreen(),
+        });
   }
 }
