@@ -4,6 +4,9 @@ import 'package:flag/flag.dart';
 import 'package:onmascota/utils/constants.dart';
 import 'package:onmascota/views/widgets/custom_button.dart';
 
+import 'create_account_partner/components/body.dart';
+import 'create_account_rider/components/body.dart';
+
 class StartScreen2 extends StatefulWidget {
   @override
   _StartScreen2State createState() => _StartScreen2State();
@@ -142,7 +145,9 @@ class _StartScreen2State extends State<StartScreen2> {
                               buttonColor: primaryColor,
                               textColor: Colors.white,
                               borderColor: primaryColor,
-                              onPress: () {},
+                              onPress: () =>  Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) => BodyOfCreateAccountPartner())),
                             ),
                             SizedBox(
                               height: 15,
@@ -152,7 +157,9 @@ class _StartScreen2State extends State<StartScreen2> {
                               buttonColor: Colors.white,
                               textColor: primaryColor,
                               borderColor: primaryColor,
-                              onPress: () {},
+                              onPress: () =>  Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) => BodyOfCreateAccountRider())),
                             )
                           ],
                         ),

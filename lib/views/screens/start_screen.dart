@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:onmascota/utils/constants.dart';
+import 'package:onmascota/views/auth/login_screen.dart';
+import 'package:onmascota/views/screens/start_screen2.dart';
 import 'package:onmascota/views/widgets/custom_button.dart';
 
 class StartScreen extends StatelessWidget {
@@ -32,7 +35,9 @@ class StartScreen extends StatelessWidget {
                   child: CustomButton(
                     buttonColor: primaryColor,
                     buttonText: "get started",
-                    onPress: () {},
+                    onPress: () => Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => StartScreen2())),
                     textColor: Colors.white,
                   ),
                 ),
@@ -45,10 +50,15 @@ class StartScreen extends StatelessWidget {
                     style: TextStyle(color: Colors.black),
                     children: <TextSpan>[
                       TextSpan(
-                          text: 'Login',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: primaryColor)),
+                        text: 'Login',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: primaryColor),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () => Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      LoginScreen())),
+                      ),
                     ],
                   ),
                 ),

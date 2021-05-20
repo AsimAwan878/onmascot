@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:onmascota/screens/splash/splash_screen.dart';
 
 import 'package:onmascota/screens/splash_gif/splash_screen.dart';
 import 'package:onmascota/screens/welcome/welcome_screen.dart';
+import 'package:onmascota/views/screens/create_account_partner/components/body.dart';
+import 'package:onmascota/views/screens/create_account_partner/create_account_partner_screen.dart';
 
 import 'constant.dart';
 
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: themeData,
-        home: LoginScreen(),
+        home: SplashScreenWithGif(),
         title: 'Onmascota',
         routes: <String, WidgetBuilder>{
           SPLASH_SCREEN: (BuildContext context) => SplashScreenWithGif(),
